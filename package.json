@@ -17,5 +17,8 @@
     "scripts": {
         "build": "webpack --config webpack.config.js",
         "start": "webpack-dev-server --open"
+    },
+    "dependencies": {
+        "jquery": "^3.2.1"
     }
 }

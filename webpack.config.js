@@ -2,7 +2,7 @@ const webpack           = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var config = {
-  context: __dirname + '/src',
+  context: __dirname + '/app',
 
   entry: {
     app: './entry.js'
@@ -54,7 +54,10 @@ var config = {
   },
 
   plugins: [
-    new ExtractTextPlugin("styles.css")
+    new ExtractTextPlugin("styles.css"),
+    new webpack.ProvidePlugin({
+      $: 'jQuery'
+    })
   ]
 
 };
