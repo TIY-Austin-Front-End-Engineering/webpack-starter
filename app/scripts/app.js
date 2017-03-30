@@ -1,5 +1,7 @@
-
+import { createStore } from 'redux'
 export default function app() {
 
-    console.log(Redux.store('foo'));
+  console.log(createStore(function (state = [], action) {
+    return state;
+  }));
 }
