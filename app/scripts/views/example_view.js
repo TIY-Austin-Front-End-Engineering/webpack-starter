@@ -8,5 +8,5 @@ export default exampleView(store) {
 
 
   //Return the html
-  return $html;k
+  return $html;
 }
