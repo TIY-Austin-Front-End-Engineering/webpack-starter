@@ -1,4 +1,4 @@
-export default exampleView(store) {
+export default function exampleView(store) {
   let state = store.getState();
 
   //Create the HTML
