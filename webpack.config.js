@@ -20,7 +20,7 @@ var config = {
       use: {
         loader: 'babel-loader',
         options: {
-          presets: ['env']
+          presets: ['env', 'react']
         }
       }
     },
