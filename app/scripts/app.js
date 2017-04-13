@@ -5,6 +5,9 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import AppRoot from './components/app_root.js'
 import About from './components/about.js'
+import Contact from './components/contact.js'
+
+const FooBar = () => (<div>Hi</div>)
 
 export default function app() {
   render(
@@ -12,7 +15,9 @@ export default function app() {
       <Router>
         <div>
           <Route path="/"      component={AppRoot}/>
-          <Route path="/about" component={About} />
+          <Route path="/foobar"  component={FooBar} />
+          <Route exact path="/about" component={About} />
+          <Route path="/contact-us" component={Contact} />
         </div>
       </Router>
     </Provider>,

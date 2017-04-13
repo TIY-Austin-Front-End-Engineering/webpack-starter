@@ -1,26 +1,36 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Route, Link, NavLink } from 'react-router-dom'
 import container from '../containers/all.js'
 
 
 const NavBar = () => {
   return (
     <nav>
-      <Link to="/">Home</Link>
+      <NavLink to="/">Home</NavLink>
       <br />
-      <Link to="/about">About</Link>
+      <NavLink to="/about">About</NavLink>
+      <br />
+      <NavLink to="/contact-us">Contact Them</NavLink>
     </nav>
   )
 }
 
 class AppRoot extends React.Component {
+  constructor (props) {
+    super(props)
+  }
+
+  onHeaderClicked ({ history }) {
+    return <h1 onClick={() => history.push('/contact-us')}>Whoa!</h1>
+  }
+
   render () {
     return (
       <main>
         <NavBar/>
         <section>
-          <h1>Whoa!</h1>
+          <Route render={this.onHeaderClicked} />
         </section>
       </main>
     );
