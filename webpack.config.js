@@ -3,7 +3,13 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var config = {
   context: __dirname + '/app',
-	devtool: '#source-map',
+
+  devtool: '#source-map',
+
+  devServer: {
+      historyApiFallback: true
+  }
+
   entry: {
     app: './entry.js'
   },
