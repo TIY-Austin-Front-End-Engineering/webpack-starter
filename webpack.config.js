@@ -8,7 +8,7 @@ var config = {
 
   devServer: {
       historyApiFallback: true
-  }
+  },
 
   entry: {
     app: './entry.js'
