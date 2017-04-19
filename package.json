@@ -1,31 +1,54 @@
 {
-    "devDependencies": {
-        "babel-core": "^6.24.0",
-        "babel-loader": "^6.4.1",
-        "babel-preset-env": "^1.2.2",
-        "babel-preset-react": "^6.24.1",
-        "css-loader": "^0.27.3",
-        "extract-text-webpack-plugin": "^2.1.0",
-        "file-loader": "^0.10.1",
-        "lodash": "^4.17.4",
-        "node-sass": "^4.5.1",
-        "react": "^15.5.3",
-        "react-dom": "^15.5.3",
-        "react-redux": "^5.0.4",
-        "react-router-dom": "^4.1.1",
-        "redux-devtools-extension": "^2.13.0",
-        "sass-loader": "^6.0.3",
-        "serve": "^5.0.4",
-        "style-loader": "^0.15.0",
-        "webpack": "^2.2.1",
-        "webpack-dev-server": "^2.4.2"
-    },
-    "scripts": {
-        "build": "webpack --config webpack.config.js",
-        "start": "webpack-dev-server --open"
-    },
-    "dependencies": {
-        "jquery": "^3.2.1",
-        "redux": "^3.6.0"
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.2.2",
+    "babel-preset-react": "^6.24.1",
+    "chai": "^3.5.0",
+    "css-loader": "^0.27.3",
+    "enzyme": "^2.8.2",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.10.1",
+    "jest": "^19.0.2",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.5.1",
+    "react": "^15.5.3",
+    "react-dom": "^15.5.3",
+    "react-redux": "^5.0.4",
+    "react-router-dom": "^4.1.1",
+    "react-test-renderer": "^15.5.4",
+    "redux-devtools-extension": "^2.13.0",
+    "sass-loader": "^6.0.3",
+    "serve": "^5.0.4",
+    "style-loader": "^0.15.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server --open",
+    "test": "jest",
+    "test:watch": "npm test -- --watch"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "redux": "^3.6.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "bower_components",
+      "shared"
+    ],
+    "testRegex": "(/test/.*|(\\.|/)(test|spec))\\.jsx?$",
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
     }
+  }
 }
