@@ -1,5 +1,5 @@
 export default {
-  allState: function (state) {
+  allState: function(state) {
     return state;
   }
-}
+};
